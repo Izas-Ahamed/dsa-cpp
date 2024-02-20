@@ -124,18 +124,28 @@ int main()
     //     cout << endl;
     // }
 
-    vector<vector<int>> v;
-    vector<int> c;
+    // vector<vector<int>> v;
+    // vector<int> c;
 
-    cout << v.size();
-    cout << v[0].size();
-    for (auto i : v)
-    {
-        for (auto j : i)
-            cout << "d" << j << "d";
+    // cout << v.size();
+    // cout << v[0].size();
+    // for (auto i : v)
+    // {
+    //     for (auto j : i)
+    //         cout << "d" << j << "d";
 
-        cout << endl;
-    }
+    //     cout << endl;
+    // }
 
+    // char a[] = "abc";
+    // char *b = new char[strlen(a) + 1];
+    int a = 10;
+    int *b = &a;
+    int *c = b;
+    int *d = c;
+
+    cout << d << endl
+         << c << endl
+         << b;
     return 0;
 }
