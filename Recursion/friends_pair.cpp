@@ -15,7 +15,7 @@ int friendsPairing(int n)
 int main()
 {
     int n = 3;
-    cout << friendsPairing(n);
+    cout << "no of ways to pair: " << friendsPairing(n) << endl;
 
     int ans = 0;
     for (int i = 1; i < n; i++)

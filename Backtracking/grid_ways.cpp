@@ -14,7 +14,7 @@ int countWays(int i, int j, int m, int n)
 
 int main()
 {
-    int m = 3, n = 3;
+    int m = 4, n = 4;
     // int arr[m][n] = {0};
     cout << countWays(0, 0, m, n);
 }

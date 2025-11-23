@@ -12,8 +12,10 @@ int main()
     for (int i = 0; i < arrSize; i++)
     {
 
+        cout << "b=" << b << ", arr[i]=" << arr[i] << ", b<<arr[i]= " << (b << arr[i]);
+
         b |= b << arr[i];
-        cout << b << endl;
+        cout << ", b |= b << arr[i]=" << b << endl;
     }
     cout << b[n];
 }

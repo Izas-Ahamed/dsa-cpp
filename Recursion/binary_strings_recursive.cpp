@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// f(n) = f(n-1) + f(n-2) - mathematical induction
 void helper(vector<string> &ans, int n, string s, int i)
 {
     if (i == n - 1)

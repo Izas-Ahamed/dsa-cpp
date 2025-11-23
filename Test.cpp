@@ -12,6 +12,39 @@ void test2(string s)
     s[0] = '1';
 }
 
+void binaryPossibilites(int n, vector<string> &s, string bin)
+{
+    if (n == 0)
+    {
+        s.push_back(bin);
+        return;
+    }
+
+    if (bin[bin.size() - 1] == '0' || bin.length() == 0)
+    {
+        binaryPossibilites(n - 1, s, bin + "0");
+
+        binaryPossibilites(n - 1, s, bin + "1");
+    }
+    else
+    {
+        binaryPossibilites(n - 1, s, bin + "0");
+    }
+}
+
+int recBinarySrch(vector<int> a, int s, int e, int k)
+{
+    if (s > e)
+        return -1;
+    int mid = (s + e) / 2;
+    if (a[mid] == k)
+        return mid;
+
+    if (a[mid] > k)
+        return recBinarySrch(a, s, mid - 1, k);
+    return recBinarySrch(a, mid + 1, e, k);
+}
+
 int main()
 {
     // char a[100] = {'a', 's', 'a', 's'};
@@ -139,13 +172,42 @@ int main()
 
     // char a[] = "abc";
     // char *b = new char[strlen(a) + 1];
-    int a = 10;
-    int *b = &a;
-    int *c = b;
-    int *d = c;
+    // int a = 10;
+    // int *b = &a;
+    // int *c = b;
+    // int *d = c;
 
-    cout << d << endl
-         << c << endl
-         << b;
-    return 0;
+    // cout << d << endl
+    //      << c << endl
+    //      << b;
+    // int x = 12, y = 25, mod = 10007;
+    // int res = 1;
+    // while (y > 0)
+    // {
+    //     if (y & 1)
+    //     {
+    //         res = (res * x) % mod;
+    //     }
+    //     x = (x * x) % mod;
+    //     y = y >> 1;
+    // }
+
+    // cout << res;
+
+    // long long x = (1LL << 32);
+    // cout << x;
+    // return 0;
+
+    // int n = 3;
+    // vector<string> s;
+    // binaryPossibilites(n, s, "");
+    // for (auto ss : s)
+    // {
+    //     cout << ss << endl;
+    // }
+
+    // rec binary
+    vector<int> a = {2, 3, 4, 5, 6};
+    cout << a.size() << endl;
+    cout << recBinarySrch(a, 0, a.size() - 1, 4);
 }

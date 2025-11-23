@@ -3,9 +3,9 @@ using namespace std;
 int main()
 {
     int a[][3] = {
-        {1,2,3},
-         {4,5,6},
-        {7,8,9}};
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}};
     int n = 4, m = 3;
     int xs = 0, ys = 0, ln = n * m;
     int x = 0, y = 0;
